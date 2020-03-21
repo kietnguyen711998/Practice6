@@ -4,35 +4,70 @@ import java.util.Scanner;
 
 public class MangagerFunction {
 	public static List<Person> listEmployee = new ArrayList<>();
+	Person employee = new Employee();
 
 	public MangagerFunction() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void add(Scanner sc) {
-		Person person = new Person() {
+	public static void initMenu(Scanner sc) {
+		System.out.println("OPTIONAL");
+		System.out.println("\t\t=== Manager Person ===");
+		System.out.println("1.Input employee or teacher ");
+		System.out.println("2.Show payroll list. ");
+		System.out.println("3.show person has highest salary");
+		System.out.println("4.show total salary must paid");
+		System.out.println("5.Exit");
+	}
 
-			@Override
-			public void show() {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void getSalary() {
-				// TODO Auto-generated method stub
-
-			}
-		};
+	public static void add(Scanner sc) {
+		Person person = new Employee();
 		person.input(sc);
 		listEmployee.add(person);
 	}
 
-	public void showListPerson() {
+	public static void showListPerson() {
 		for (int i = 0; i < listEmployee.size(); i++) {
 			System.out.println("=== Information Person " + (i + 1) + " ===");
 			listEmployee.get(i).show();
 		}
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		// initialization object
+		int option;
+		do {
+			initMenu(sc);
+			option = sc.nextInt();
+			// switch case ste
+			switch (option) {
+			case 1:
+				add(sc);
+				break;
+
+			case 2:
+				showListPerson();
+				break;
+
+			case 3:
+
+				break;
+			case 4:
+
+				break;
+
+			case 5:
+				System.exit(0);
+				break;
+
+			default:
+				initMenu(sc);
+				break;
+			}
+		} while (option != 5);
+
 	}
 
 }

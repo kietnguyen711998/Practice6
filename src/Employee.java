@@ -6,6 +6,11 @@ public class Employee extends Person {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Employee(String mSalaryFactor) {
+		super();
+		this.mSalaryFactor = mSalaryFactor;
+	}
+
 	@Override
 	public void getSalary() {
 		this.mSalaryFactor = mSalaryFactor;
