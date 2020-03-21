@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MangagerFunction {
 	public static List<Person> listEmployee = new ArrayList<>();
-	static Person employee = new Employee();
+	Person employee = new Employee();
 
 	public MangagerFunction() {
 		// TODO Auto-generated constructor stub
@@ -15,8 +15,8 @@ public class MangagerFunction {
 		System.out.println("\t\t=== Manager Person ===");
 		System.out.println("1.Input employee or teacher ");
 		System.out.println("2.Show payroll list. ");
-		System.out.println("3.show person has highest salary");
-		System.out.println("4.show total salary must paid");
+		System.out.println("3.Show person has highest salary");
+		System.out.println("4.Show total salary must paid");
 		System.out.println("5.Exit");
 	}
 
@@ -33,7 +33,7 @@ public class MangagerFunction {
 		}
 	}
 
-	static Person employee1 = null;
+	Person employee1 = null;
 
 	public static void highestSalary() {
 		Employee newEmployee = new Employee();
@@ -45,10 +45,10 @@ public class MangagerFunction {
 //				if (person1.getSalary() > employee1.getSalary()) {
 //					newEmployee = (Employee) person1;
 //				}
-				System.out.println(employee.getSalary());
+				System.out.println(person1.getSalary());
 
 			}
-//			newEmployee.show();
+			// newEmployee.show();
 		}
 	}
 

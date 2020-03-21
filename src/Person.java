@@ -63,11 +63,8 @@ public abstract class Person {
 		System.out.print("Person address: ");
 		this.mAddress = scanner.next();
 
-		System.out.print("Person SalaryFactor: ");
-		Employee.mSalaryFactor = scanner.nextInt();
-
-		System.out.print("Person Hour: ");
-		Teacher.mHour = scanner.nextInt();
+		// System.out.print("Person Hour: ");
+		// Teacher.mHour = scanner.nextInt();
 	}
 
 	public abstract int getSalary();
