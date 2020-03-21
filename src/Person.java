@@ -70,7 +70,7 @@ public abstract class Person {
 		Teacher.mHour = scanner.nextInt();
 	}
 
-	public abstract void getSalary();
+	public abstract int getSalary();
 
 	public abstract void show();
 

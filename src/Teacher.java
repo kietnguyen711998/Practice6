@@ -11,7 +11,8 @@ public class Teacher extends Person {
 	}
 
 	@Override
-	public void getSalary() {
+	public int getSalary() {
+		return E;
 		// TODO Auto-generated method stub
 
 	}

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MangagerFunction {
 	public static List<Person> listEmployee = new ArrayList<>();
-	Person employee = new Employee();
+	static Person employee = new Employee();
 
 	public MangagerFunction() {
 		// TODO Auto-generated constructor stub
@@ -33,6 +33,34 @@ public class MangagerFunction {
 		}
 	}
 
+	static Person employee1 = null;
+
+	public static void highestSalary() {
+		Employee newEmployee = new Employee();
+		newEmployee = null;
+		for (Person person1 : listEmployee) {
+			if (newEmployee == null) {
+				newEmployee = (Employee) person1;
+			} else {
+//				if (person1.getSalary() > employee1.getSalary()) {
+//					newEmployee = (Employee) person1;
+//				}
+				System.out.println(employee.getSalary());
+
+			}
+//			newEmployee.show();
+		}
+	}
+
+	public static void totaltSalary() {
+		int total = 0;
+		for (Person person1 : listEmployee) {
+			total += person1.getSalary();
+		}
+
+		System.out.println(" Total salary must paid" + total);
+	}
+
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
@@ -46,22 +74,18 @@ public class MangagerFunction {
 			case 1:
 				add(sc);
 				break;
-
 			case 2:
 				showListPerson();
 				break;
-
 			case 3:
-
+				highestSalary();
 				break;
 			case 4:
-
+				totaltSalary();
 				break;
-
 			case 5:
 				System.exit(0);
 				break;
-
 			default:
 				initMenu(sc);
 				break;
