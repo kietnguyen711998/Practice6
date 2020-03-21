@@ -1,12 +1,11 @@
-
 public class Employee extends Person {
-	public String mSalaryFactor;
+	public static int mSalaryFactor;
 
 	public Employee() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee(String mSalaryFactor) {
+	public Employee(int mSalaryFactor) {
 		super();
 		this.mSalaryFactor = mSalaryFactor;
 	}
@@ -25,6 +24,7 @@ public class Employee extends Person {
 		System.out.println("AGE: " + this.mDateOfBirth);
 		System.out.println("ADDRESS: " + this.getmAddress());
 		System.out.println("Salary: " + this.mSalaryFactor);
+		System.out.println("Hour: " + Teacher.mHour);
 
 	}
 

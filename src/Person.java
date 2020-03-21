@@ -5,8 +5,6 @@ public abstract class Person {
 	public String mName;
 	public String mDateOfBirth;
 	public String mAddress;
-	Employee e = new Employee();
-	Teacher t = new Teacher();
 
 	public Person() {
 		// TODO Auto-generated constructor stub
@@ -62,15 +60,14 @@ public abstract class Person {
 		System.out.print("Person DateOfBirth: ");
 		this.mDateOfBirth = scanner.next();
 
-		System.out.print("Student address: ");
+		System.out.print("Person address: ");
 		this.mAddress = scanner.next();
 
-		System.out.print("Student mSalaryFactor: ");
-		e.mSalaryFactor = scanner.next();
+		System.out.print("Person SalaryFactor: ");
+		Employee.mSalaryFactor = scanner.nextInt();
 
-		System.out.print("Student mHour: ");
-		t.mHour = scanner.next();
-
+		System.out.print("Person Hour: ");
+		Teacher.mHour = scanner.nextInt();
 	}
 
 	public abstract void getSalary();

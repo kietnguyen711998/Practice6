@@ -1,12 +1,11 @@
-
 public class Teacher extends Person {
-	public String mHour;
+	public static int mHour;
 
 	public Teacher() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Teacher(String mHour) {
+	public Teacher(int mHour) {
 		super();
 		this.mHour = mHour;
 	}
