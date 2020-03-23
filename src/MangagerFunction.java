@@ -3,14 +3,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class MangagerFunction {
-	public static List<Person> listEmployee = new ArrayList<>();
+	public List<Person> listEmployee = new ArrayList<>();
 	Person employee = new Employee();
 
 	public MangagerFunction() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public static void initMenu(Scanner sc) {
+	public void initMenu(Scanner sc) {
 		System.out.println("OPTIONAL");
 		System.out.println("\t\t=== Manager Person ===");
 		System.out.println("1.Input employee or teacher ");
@@ -20,13 +20,13 @@ public class MangagerFunction {
 		System.out.println("5.Exit");
 	}
 
-	public static void add(Scanner sc) {
+	public void add(Scanner sc) {
 		Person person = new Employee();
 		person.input(sc);
 		listEmployee.add(person);
 	}
 
-	public static void showListPerson() {
+	public void showListPerson() {
 		for (int i = 0; i < listEmployee.size(); i++) {
 			System.out.println("=== Information Person " + (i + 1) + " ===");
 			listEmployee.get(i).show();
@@ -35,7 +35,7 @@ public class MangagerFunction {
 
 	Person employee1 = null;
 
-	public static void highestSalary() {
+	public void highestSalary() {
 		Employee newEmployee = new Employee();
 		newEmployee = null;
 		for (Person person1 : listEmployee) {
@@ -52,42 +52,42 @@ public class MangagerFunction {
 		}
 	}
 
-	public static void totaltSalary() {
+	public void totaltSalary() {
 		int total = 0;
 		for (Person person1 : listEmployee) {
 			total += person1.getSalary();
 		}
 
-		System.out.println(" Total salary must paid" + total);
+		System.out.println(" Total salary must paid :" + total);
 	}
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
+		MangagerFunction manafun = new MangagerFunction();
 		// initialization object
 		int option;
 		do {
-			initMenu(sc);
+			manafun.initMenu(sc);
 			option = sc.nextInt();
 			// switch case ste
 			switch (option) {
 			case 1:
-				add(sc);
+				manafun.add(sc);
 				break;
 			case 2:
-				showListPerson();
+				manafun.showListPerson();
 				break;
 			case 3:
-				highestSalary();
+				manafun.highestSalary();
 				break;
 			case 4:
-				totaltSalary();
+				manafun.totaltSalary();
 				break;
 			case 5:
 				System.exit(0);
 				break;
 			default:
-				initMenu(sc);
+				manafun.initMenu(sc);
 				break;
 			}
 		} while (option != 5);
